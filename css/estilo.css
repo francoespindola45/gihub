@@ -1,0 +1,132 @@
+/*normalize*/
+
+*,
+*::before
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contain{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.grid-container-index{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "head"
+    "mainbanner"
+    "quienes"
+    "hacemos"
+    "requisitos"
+    "foot"     
+    ;
+    gap: 2rem;
+}
+
+.grid-container-experiencias{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "head"
+    "cachi"
+    "tequila"
+    "wisky"
+    "ron"
+    "foot"    
+    ;
+    gap: 2rem;
+}
+
+.header{
+    grid-area: head;
+}
+
+.footer{
+    grid-area: foot;
+}
+
+.mainbanner{
+    grid-area: mainbanner;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+
+.info p{
+    margin: 0 1rem;
+}
+
+.img-wrap{
+    height: 10rem;
+}
+
+.quienes{
+    grid-area: quienes;
+}
+
+.hacemos{
+    grid-area: hacemos;
+}
+
+.requisitos{
+    grid-area: requisitos;
+}
+
+.cachi{
+    grid-area: cachi;
+}
+
+.tequila{
+    grid-area: tequila;
+}
+
+.wisky{
+    grid-area: wisky;
+}
+
+.ron{
+    grid-area: ron;
+}
+
+@media only screen and (min-width: 900px) {
+    .grid-container-index{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head head"
+        "mainbanner mainbanner"
+        "quienes hacemos"
+        "requisitos requisitos"
+        "foot foot" 
+        ;
+        gap: 1rem;
+    }
+    .grid-container-experiencias{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "head header"
+        "cachi tequila"
+        "wisky ron"
+        "foot foot"    
+        ;
+        gap: 1rem;
+    }
+}
